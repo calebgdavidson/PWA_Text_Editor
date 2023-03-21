@@ -1,9 +1,10 @@
-# Text Editor Starter Code
+# Progressive Web Application Text Editor
 
 # User Story 
 As a developer, I want to create notes or code snippets with or without an internet connection, so that I can reliably retrieve them for later use.
+***
 
-#Acceptance Criteria:
+# Acceptance Criteria:
  *GIVEN a text editor web application
  *WHEN I open my application in my editor
  *THEN I should see a client server folder structure
@@ -29,3 +30,4 @@ As a developer, I want to create notes or code snippets with or without an inter
  *THEN I should have my static assets pre cached upon loading along with subsequent pages and static assets
  *WHEN I deploy to Heroku
  *THEN I should have proper build scripts for a webpack application
+ ***
