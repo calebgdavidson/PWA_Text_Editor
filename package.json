@@ -1,10 +1,16 @@
 {
   "name": "pwa_text_editor",
   "version": "1.0.0",
-  "description": "pwa text editor",
+  "description": "text editor",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "start:dev": "",
+    "start": "npm start",
+    "server": "",
+    "build": "npm run build",
+    "install": "",
+    "client": ""
   },
   "repository": {
     "type": "git",
