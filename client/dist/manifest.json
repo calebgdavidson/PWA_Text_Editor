@@ -1,0 +1,8 @@
+{
+  "name": "PWA Text Editor",
+  "short_name": "PTE",
+  "orientation": "portrait",
+  "display": "standalone",
+  "start_url": "/",
+  "description": ""
+}

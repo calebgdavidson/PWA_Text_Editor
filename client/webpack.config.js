@@ -17,14 +17,44 @@ module.exports = () => {
       filename: '[name].bundle.js',
       path: path.resolve(__dirname, 'dist'),
     },
-    plugins: [
-      
-    ],
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: "./index.html",
+      title: "html plugin",
+    }),
+    new InjectManifest({
+      swSrc: "./src-sw.js",
+      swDest: "service-worker.js",
+    }),
+    new WebpackPwaManifest({
+      name: "PWA Text Editor",
+      short_name: "PTE",
+      start_url: "/",
+      publicPath: "/",
+      fingerprints: false,
+      inject: true,
+    }),
+  ],
 
-    module: {
-      rules: [
-        
-      ],
+module: {
+  rules: [
+    {
+      test: /\.css$/i,
+      use: ["style-loader", "css-loader"],
     },
-  };
-};
+    {
+      test: /\.m?js$/,
+      exclude: /node_modules/,
+      use: {
+        loader: "babel-loader",
+        options: {
+          presets: ["@babel/preset-env"],
+          plugins:[
+            "@babel/plugin-proposal-object-rest-spread",
+            "@babel/transform-runtime",
+          ],
+        },
+      },
+    },
+  ],
+},};};
